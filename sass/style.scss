@@ -348,9 +348,145 @@ button:focus,
 }
 
 
+.flex-eq-col-width {
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1
+ }
+
+
 // HOMEPAGE //
+.header {
+    background-color: var(--white);
+    padding: 25px 40px;
+    font-family: var(--fontAvertaStd);
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.75px;
+}
+
+.header.menuHeader {
+    z-index: 10000000000;
+    background: transparent;
+    color: var(--white);
+}
+
+.header .logomain {
+    text-align: center;
+}
+
+.header .headerLogo {
+    height: 86px;
+    width: 177px;
+}
+
+.header.menuHeader .headerLogo{
+    display: none;
+}
+
+.header.menuHeader .whiteLogo{
+    display: inline-block !important;
+}
+
+.header.menuHeader .tel img{
+    display: none;
+}
+
+.header.menuHeader .tel .whiteTel{
+    display: inline-block !important;
+}
 
 
+.header .header-left a {
+    color: var(--black-light);
+}
+
+.header.menuHeader .header-left a {
+    color: var(--white);
+}
+
+.header .bookButton {
+    width: 140px;
+    height: 46px;
+    padding: 11px;
+}
+
+.weather-booked-vertical-one-prime {
+    width: 175px !important;
+    color: var(--black-light) !important;
+}
+
+.header.menuHeader .weather-booked-vertical-one-prime {
+    color: var(--white) !important;
+}
+
+.booked-vertical-prime .booked-bwop-today-extreme {
+    display: none !important;
+}
+
+.bwop-city {
+    display: none !important;
+}
+
+.weather-booked-vertical-one-prime * ,
+.weather-booked-vertical-one-prime  .booked-vertical-prime .booked-bwop-number {
+    font: normal 15px/26px var(--fontAvertaStd) !important;
+    letter-spacing: 0.75px !important;
+}
+
+.booked-vertical-prime {
+    background: none !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px !important;
+}
+
+.bwop-icon {
+    margin: 0 !important;
+    order: 1;
+}
+
+.booked-vertical-prime .bwop-state {
+    order: 2;
+    margin-left: 8px;
+    color: var(--black-light) !important;
+}
+
+.header.menuHeader .booked-vertical-prime .bwop-state {
+    color: var(--white) !important;
+}
+
+
+.booked-vertical-prime .booked-bwop-today {
+    order: 3;
+    margin-left: 8px;
+}
+
+.booked-vertical-prime .booked-bwop-today-temperature {
+    margin-bottom: 0 !important;
+}
+
+.booked-vertical-prime .booked-bwop-dergee{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.booked-vertical-prime .booked-wzs-bwop-dergee-val {
+    font-size: 18px !important;
+    height: 12px !important;
+    margin-top: -15px !important;
+}
+
+.booked-vertical-prime .booked-wzs-bwop-val {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ 
 // WELCOME SECTION 
 .welcome p {
     padding: 20px 80px 0px 0px;
@@ -978,3 +1114,153 @@ button:focus,
 
 
 
+.header .menu-btn {
+    width: 120px;
+    background: url(../images/varius/toggler.svg) no-repeat right 2px;
+    cursor: pointer;
+}
+
+.header.menuHeader .menu-btn {
+    background: url(../images/varius/closeMenu.svg) no-repeat right 2px;
+}
+
+.header.menuHeader .menu-btn.closeMenu {
+    display: inline-block !important;
+}
+
+.header.menuHeader .menu-btn.openMenu {
+    display: none;
+}
+
+
+.menu-container {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background:linear-gradient(rgba(0, 0,0,.45), rgba(0, 0, 0, .45)), url(../images/varius/ON-Residence-Corridor.jpg) no-repeat center center/cover ;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+}
+.menu-content {
+    height: 100vh;
+    overflow-y: scroll;
+    display: block;
+    position: relative;
+    padding-bottom: 60px;
+}
+.menu-content .menu-items a {
+    font: normal normal normal 36px/44px var(--fontGeorgiou);
+    padding: 5px ;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    margin: 5px 0px;
+    transition: .3s linear;
+}
+
+.menu-content a:hover { 
+    color: var(--gold);
+}
+
+.menu-contact {
+    font: normal normal normal 15px/26px Averta Std;
+    letter-spacing: 0.75px;
+    color: var(--white);
+    text-align: center;
+}
+
+.menu-contact a{
+    color: var(--white);
+    padding-bottom: 5px;
+    border-bottom: 1px solid ;
+}
+
+.menu-contact .social ul{
+    display: inline-flex;
+}
+
+.menu-contact .social ul li a{
+    border: none;
+    padding: 0px 10px;
+}
+
+/* TOP CAROUSEL  */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.topCarousel {
+  height: 100%;
+  position: relative;
+}
+
+#bgCarouselSlider .carousel-item .overlay {
+  height: 100vh;
+  background-size: cover;
+  filter: grayscale(70%);
+}
+
+.topCarousel .carousel .carousel-control-prev,
+.topCarousel .carousel .carousel-control-next {
+  visibility: hidden;
+  width: 100px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.topCarousel .carousel:hover .carousel-control-prev,
+.topCarousel .carousel:hover .carousel-control-next {
+  visibility: visible;
+}
+
+.topCarousel .carousel .carousel-control-prev .carousel-control-prev-icon,
+.topCarousel .carousel .carousel-control-next .carousel-control-next-icon {
+  width: 32px;
+  height: 50px;
+}
+
+/*RESPONSIVE CAROUSEL  */
+@media (max-width: 767px) {
+  #bgCarouselSlider .carousel-item {
+    height: 100vh;
+  }
+  #bgCarouselSlider .carousel-inner {
+    margin-top: 0x;
+  }
+  .topCarousel .carousel .carousel-control-prev, .topCarousel .carousel .carousel-control-next {
+    top: 30px;
+  }
+}
+
+
+.arrow-wrap {
+    z-index: 100;
+    position: absolute;
+    bottom: 0%;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    color: var(--white);
+
+  
+  }
+  
+  .arrow-wrap img{
+    display: block;
+    margin: auto;
+    transform: rotate(-33deg) scale(1);
+    margin-top: 10px;
+  }
+  
+  .arrow-wrap:hover img{
+    transform: rotate(-33deg) scale(1.5);
+  }
+  
+ 
