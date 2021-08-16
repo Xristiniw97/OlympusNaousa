@@ -79,6 +79,23 @@ $(document).ready(function() {
       $("header").removeClass('menuHeader');
     });
 
+    $(".carouselBtn").click(function() {
+      $(".overlay").css("filter","none");
+    });
+
+
+    $(".carouselBtn").mouseenter(function() {
+      $(".overlay").css("filter","none");
+    });
+   
+    $(".carouselBtn").mouseleave(function() {
+      $(".overlay").css("filter"," grayscale(80%)");
+    });
+
+
+    $(window).on("scroll touchmove", function () {
+      $('#header_nav').toggleClass('tiny', $(document).scrollTop() > 0);
+  });
 })
 
 

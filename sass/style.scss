@@ -122,27 +122,28 @@ body {
     }
 }
 
-h1,h2,h3,.h1 {
+h1,h2,h3,.h1,.h2 {
     font-family: var(--fontGeorgiou);
     margin: 20px 0px;
-    letter-spacing: -1.36px;
     position: relative;
-
 }
 
 h1,.h1 {
     font-size: 76px;
     line-height: 86px;
+    letter-spacing: -1.52px;
 }
 
-h2 {
+h2,.h2 {
     font-size: 68px;
     line-height: 74px;
+    letter-spacing: -1.36px;
 }
 
-h3 {
+h3,.h3 {
     font-size: 48px;
     line-height: 58px;
+    letter-spacing: 0px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -151,33 +152,35 @@ h3 {
         line-height: 76px;
     }
     
-    h2 {
-        font-size: 50px;
-        line-height: 60px;
+    h2,.h2 {
+        font-size: 66px;
+        line-height: 76px;
     }
     
-    h3 {
-        font-size: 35px;
-        line-height: 45px;
+    h3,.h3 {
+        font-size: 45px;
+        line-height: 65px;
     }
 }
 
 @media screen and (max-width: 800px) {
     h1,.h1 {
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 48px;
+        line-height: 58px;
     }
     
-    h2 {
-        font-size: 40px;
-        line-height: 50px;
+    h2,.h2 {
+        font-size: 48px;
+        line-height: 58px;
     }
     
-    h3 {
-        font-size: 30px;
-        line-height: 40px;
+    h3,.h3 {
+        font-size: 36px;
+        line-height:58px;
     }
 }
+
+
 
 a {
     text-decoration: none;
@@ -331,7 +334,7 @@ button:focus,
 .blackImg {
     filter: grayscale(5);
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .blackImg:hover {
@@ -358,7 +361,7 @@ button:focus,
 // HOMEPAGE //
 .header {
     background-color: var(--white);
-    padding: 25px 40px;
+    padding: 20px 40px;
     font-family: var(--fontAvertaStd);
     font-size: 15px;
     line-height: 26px;
@@ -375,6 +378,11 @@ button:focus,
     text-align: center;
 }
 
+.header.tiny .headerLogo {
+    height: 60px;
+    width: 177px;
+}
+
 .header .headerLogo {
     height: 86px;
     width: 177px;
@@ -388,8 +396,16 @@ button:focus,
     display: inline-block !important;
 }
 
+.header .tel img{ 
+    margin-bottom: 4px;
+}
+
 .header.menuHeader .tel img{
     display: none;
+}
+
+.header .mobileTel img{
+    width: 25px;
 }
 
 .header.menuHeader .tel .whiteTel{
@@ -484,6 +500,66 @@ button:focus,
     align-items: center;
 }
 
+@media screen and (max-width: 1440px) {
+    .header {
+        padding: 20px 25px;
+    }
+    .weather-booked-vertical-one-prime {
+        width: 150px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #m-booked-vertical-one-prime-82549 {
+        display: none !important;
+    }
+    .header {
+        padding: 10px 25px;
+    }
+    .header .headerLogo {
+        height: 60px;
+        width: 130px;
+    }
+    .header.tiny .headerLogo {
+        height: 50px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .header .bookButton {
+        width: 100px;
+        height: 40px;
+        padding: 8px;
+        
+    }
+    .header {
+        padding: 10px 15px;
+    }
+    .header .headerLogo {
+        height: 55px;
+        width: 110px;
+    }
+
+    .header.tiny .headerLogo {
+        height: 45px;
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .header .bookButton {
+        width: 85px;
+        height: 48px;
+        padding: 6px;
+        font: normal normal 500 12px/20px var(--fontAvertaStd);
+    }
+   
+    .header .menu-btn {
+        width: 40px;
+    }
+}
+
 
 
  
@@ -492,7 +568,7 @@ button:focus,
     padding: 20px 80px 0px 0px;
 }
 
-.welcome h3 {
+.welcome .h3 {
     display: inline-block;
     border-top: 1px solid var(--black-light);
     padding-top: 10px;
@@ -527,10 +603,16 @@ button:focus,
 
 @media screen and (max-width:767px) {
     .accommodation .accommodation-box {
-       padding: 10px 10px 0px;
+       padding: 10px 20px 0px;
+       width: 90%;
     }
     .accommodation .container p {
         padding: 10px 10% 0px;
+    }
+
+    .accommodation .underLineHeading {
+        font-size: 36px;
+        line-height: 58px;
     }
 }
 //END ACCOMMODATION SECTION 
@@ -554,10 +636,10 @@ button:focus,
     margin-bottom: 20px;
     position: relative;
     display: flex;
-    -webkit-transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
-    transition: all .5s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
 }
 
 #tabs .tabcontent {
@@ -566,43 +648,43 @@ button:focus,
     top: 14%;
     left: 200px;
     text-align: center;
-    -webkit-transition: all .5s ease-in;
-        -moz-transition: all .5s ease-in;
-        -o-transition: all .5s ease-in;
-        transition: all .5s ease-in;
+    -webkit-transition: all .3s ease-in;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        transition: all .3s ease-in;
 }
 
 #tabs li.staticImg img.bottom{
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
 }
 
 #tabs li.tab:hover .tab-box{
     z-index:2;
     color: var(--green);
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 
 #tabs li.staticImg img:hover{
     z-index:2;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #tabs li.staticImg .tabcontent {
     opacity:1;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #tabs li.tab .tabcontent{
@@ -612,10 +694,10 @@ button:focus,
 #tabs:hover .tabcontent, #tabs:focus .tabcontent,
 #tabs:active .tabcontent{
     opacity:0;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #tabs li.tab:hover .tabcontent, #tabs li.tab:focus .tabcontent,
@@ -623,10 +705,10 @@ button:focus,
     z-index:3;
     background-color: var(--white-dark1);
     opacity:1;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #tabs li.staticImg:hover .tabcontent, #tabs li.staticImg:focus .tabcontent,
@@ -634,17 +716,17 @@ button:focus,
     z-index:3;
     background-color: var(--white-dark1);
     opacity:1;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #tabs li.staticImg{
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #tabs .tabcontent img {
@@ -989,6 +1071,9 @@ button:focus,
 
 
 // FOOTER 
+.footer h3 {
+    letter-spacing: -0.96px;
+}
 .footer .col-md-6{
     padding: 100px 80px 150px;
 }
@@ -1139,17 +1224,19 @@ button:focus,
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10000;
   background:linear-gradient(rgba(0, 0,0,.45), rgba(0, 0, 0, .45)), url(../images/varius/ON-Residence-Corridor.jpg) no-repeat center center/cover ;
-  overflow: hidden;
-  transition: 1s ease-in-out;
+  overflow-y: hidden;
+  backface-visibility: hidden;
+  transition: .5s linear;
 }
 .menu-content {
     height: 100vh;
-    overflow-y: scroll;
     display: block;
     position: relative;
-    padding-bottom: 60px;
+    margin-top: 8vh;
+    backface-visibility: hidden;
+    overflow-y: scroll;
 }
 .menu-content .menu-items a {
     font: normal normal normal 36px/44px var(--fontGeorgiou);
@@ -1188,6 +1275,50 @@ button:focus,
     padding: 0px 10px;
 }
 
+@media screen and (max-width: 1199px) {
+    .menu-content .menu-items a {
+        font: normal normal normal 28px/40px var(--fontGeorgiou);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .menu-btn span {
+       visibility: hidden;
+       opacity: 0;
+    }
+    .header .menu-btn {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+   
+    .header .menu-btn {
+        width: 40px;
+    }
+    .header.menuHeader .menu-btn{
+        width: 50px;
+    }
+}
+
+
+
+@media screen and (max-height: 700px) {
+    .menu-content .menu-items a {
+        font: normal normal normal 18px/22px var(--fontGeorgiou);
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .menu-content .menu-items a {
+        font: normal normal normal 15px/18px var(--fontGeorgiou);
+        margin: 0px;
+    }
+}
+
+
+
+
 /* TOP CAROUSEL  */
 .carousel,
 .carousel-inner,
@@ -1204,15 +1335,15 @@ button:focus,
 #bgCarouselSlider .carousel-item .overlay {
   height: 100vh;
   background-size: cover;
-  filter: grayscale(70%);
+  filter: grayscale(80%);
 }
 
 .topCarousel .carousel .carousel-control-prev,
 .topCarousel .carousel .carousel-control-next {
   visibility: hidden;
   width: 100px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .topCarousel .carousel:hover .carousel-control-prev,
@@ -1224,6 +1355,14 @@ button:focus,
 .topCarousel .carousel .carousel-control-next .carousel-control-next-icon {
   width: 32px;
   height: 50px;
+}
+
+.topCarousel .caption {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
 }
 
 /*RESPONSIVE CAROUSEL  */
@@ -1241,26 +1380,53 @@ button:focus,
 
 
 .arrow-wrap {
-    z-index: 100;
+    z-index: 1000;
     position: absolute;
-    bottom: 0%;
+    bottom: -4%;
     cursor: pointer;
     text-align: center;
     overflow: hidden;
     color: var(--white);
-
-  
+    transition: .3s linear;
   }
   
   .arrow-wrap img{
+    width: 45px;
     display: block;
     margin: auto;
     transform: rotate(-33deg) scale(1);
     margin-top: 10px;
+    transition: .3s linear;
+    backface-visibility: hidden;
   }
   
   .arrow-wrap:hover img{
     transform: rotate(-33deg) scale(1.5);
   }
+
+  .arrow-wrap span {
+    margin-bottom: 20px;
+    transition: .3s linear;
+  }
+
+  .arrow-wrap:hover span {
+      margin-bottom: 15px;
+  }
   
- 
+ /* SCROLL UP  */
+.toTop {
+    text-align: right;
+  }
+a.scrollup, a:hover.scrollup {
+    background: url(../images/varius/scrollup.svg) no-repeat center center;
+    background-size: 30px;
+    bottom: 20px;
+    position: fixed;
+    right: 40px;
+    text-indent: -9999px;
+    width: 52px;
+    height: 152px;
+    text-decoration: none;
+    padding: 0px 0px;
+    z-index: 10001;
+}
