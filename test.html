@@ -10,100 +10,103 @@
 	    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" /> 
+
     <link rel="stylesheet" href="sass/style.css">
 </head>
 <body >
 
-  <div class="goldBg">
-    <section class="mainContent padding-distances">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-md-6 d-flex justify-content-center">
-                    <img src="./images/landing/main-content.jpg" alt="Olympos Naousa Residence" class="blackImg img-fluid">
-                </div>
-                <div class="col-md-6  d-flex align-items-center ">
-                    <div class="mainContent-box">
-                        <h1 class="underLineHeading">Hotel</h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-                        </p>
+
+
+    <footer class="footer position-relative">
+        <div class="row no-gutters">
+            <div class="col-md-6 leftSide whiteBg">
+                <div class="row justify-content-around no-gutters">
+                    <div class="footerLogo">
+                        <img src="./images/varius/logo.svg" alt="Olympos Naousa" class="img-fluid">
+                    </div>
+                    <div class="footerMenu">
+                        <ul>
+                            <li><a href="#">Carrer</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Health & Safety</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="contactDetails">
+                        <p>t +30 2310 234567<br> e info@on.gr<br><br>
+                                Leoforos Nikis 23 <br>546 34 Thessaloniki<br> Greece <br></p>
+                        <a href="#">Get Directions</a>
+                    </div>
+                    <div class="footerSocial mt-5">
+                        <ul>
+                            <li><a href="#"><img src="./images/varius/fb-icon.svg" alt="Olympos Naousa Residence"></a></li>
+                            <li><a href="#"><img src="./images/varius/insta-icon.svg" alt="Olympos Naousa Residence"></a></li>
+                            <li><a href="#"><img src="./images/varius/tweet-icon.svg" alt="Olympos Naousa Residence"></a></li>
+                            <li><a href="#"><img src="./images/varius/yt-icon.svg" alt="Olympos Naousa Residence"></a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 rightSide d-flex flex-column">
+                <div class="smallText">
+                    newsletter
+                </div>
+                <h3>Sign up for special<br> offers & promotions</h3>
+                <a href="#" class="btn signBtn">SIGN UP <img src="./images/varius/whiteSmallRightArrow.svg" alt="Olympos Naousa Residence" class="img-fluid ml-2"></a>
+            </div>
+          </div>
+        <div class="copyrightText smallText">
+            <p>Copyright © 2021 Olympus Naousa Residence</p>
+              <!-- Button to trigger modal -->
+            <a href="#myModal" class="" data-toggle="modal">Credits</a>
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+            </div>
+            <div class="modal-body p-2 p-md-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Design: Point Blank & Red</p>
+                        <p>Creative Development: EyeWide</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Photo Credits:</p>
+                        <p>Yannis Megas Archive / Central Library / Aristotle University of Thessaloniki</p>
+                        <p>ELIA (Greek Literary and Historical Archive), Thessaloniki</p>
+                        <p>Thessaloniki Museum of Photography</p>
+                    </div>
+                </div>
+            </div>
+            
             </div>
         </div>
-     </section>
-     <section class="padding-distances pageContent">
-        <div class="row">
-            <div class="col-md-6 padding-distances px-4 pt-0">
-                <div class="pageContent-box">
-                    <img src="./images/landing/ON-Residence-Entrance.jpg" alt="Olympos Naousa Residence" class="img-fluid blackImg">
-                    <div class="pageContent text-center p-2 p-lg-4">
-                        <h2 class="h3">About the Hotel</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-                        <a href="#" class="btn link linkLight mt-2 mt-sm-4">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 padding-distances px-4 pt-0">
-                <div class="pageContent-box">
-                    <img src="./images/landing/stock-photo-view-of-aristotelous-square-the-heart-of-thessaloniki-city-greece-531480304.jpg" alt="Olympos Naousa Residence" class="img-fluid blackImg">
-                    <div class="pageContent text-center p-2 p-lg-4">
-                        <h2 class="h3">Location</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-                        <a href="#" class="btn link linkLight mt-2 mt-sm-4">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 padding-distances px-4 pt-0">
-                <div class="pageContent-box">
-                    <img src="./images/landing/stock-photo-food-645095401.jpg" alt="Olympos Naousa Residence" class="img-fluid blackImg">
-                    <div class="pageContent text-center p-2 p-lg-4">
-                        <h2 class="h3">Services</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-                        <a href="#" class="btn link linkLight mt-2 mt-sm-4">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 padding-distances px-4 pt-0">
-                <div class="pageContent-box">
-                    <img src="./images/landing/_MG_7654.jpg" alt="Olympos Naousa Residence" class="img-fluid blackImg">
-                    <div class="pageContent text-center p-2 p-lg-4">
-                        <h2 class="h3">Gallery</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-                        <a href="#" class="btn link linkLight mt-2 mt-sm-4">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6  padding-distances px-4 pt-0">
-                <div class="pageContent-box">
-                    <img src="./images/landing/ON-Residence-Gym.jpg" alt="Olympos Naousa Residence" class="img-fluid blackImg">
-                    <div class="pageContent text-center p-2 p-lg-4">
-                        <h2 class="h3">News</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-                        <a href="#" class="btn link linkLight mt-2 mt-sm-4">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
-  </div>
-    
+    </div>
 
 
-
-
-
+       
+          
+   
 
 <!-- JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <script src="./scripts/scripts.js"></script>
-<script>
- 
-</script>
+
 </body>
 </html>

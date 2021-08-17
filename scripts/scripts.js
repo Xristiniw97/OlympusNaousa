@@ -96,6 +96,17 @@ $(document).ready(function() {
     $(window).on("scroll touchmove", function () {
       $('#header_nav').toggleClass('tiny', $(document).scrollTop() > 0);
   });
+
+  // add all to same gallery
+  $(".galleryPage .fancy").attr("data-fancybox","mygallery");
+  // assign captions and title from alt-attributes of images:
+  $(".galleryPage .fancy").each(function(){
+    $(this).attr("data-caption", $(this).find("img").attr("alt"));
+    $(this).attr("title", $(this).find("img").attr("alt"));
+  });
+  // start fancybox:
+    $(".galleryPage .fancy").fancybox();
+
 })
 
 
