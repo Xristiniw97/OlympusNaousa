@@ -228,6 +228,7 @@ ul {
     letter-spacing: 0.65px;
     text-transform: uppercase;
     font-weight: 400;
+    margin-bottom: 30px;
     display: inline-block;
 }
 
@@ -370,28 +371,28 @@ button:focus,
         padding: 120px 100px;
     }
     .padding-distances-sm {
-        padding: 120px 80px;
+        padding: 120px 85px;
     }
 }
 @media screen and (max-width:1199px) {
     .padding-distances-bg {
-        padding: 100px 70px;
+        padding: 120px 70px;
     }
     .padding-distances-sm {
-        padding: 120px 60px;
+        padding: 120px 55px;
     }
 }
 @media screen and (max-width:991px) {
     .padding-distances-bg {
-        padding: 120px 45px;
+        padding: 100px 45px;
     }
     .padding-distances-sm {
-        padding: 120px 30px;
+        padding: 100px 30px;
     }
 }
 @media screen and (max-width:575px) {
     .padding-distances-bg,.padding-distances-sm {
-        padding: 60px 15px 80px;
+        padding: 80px 15px;
     }
 }
 
@@ -440,6 +441,36 @@ button:focus,
  }
 
 
+// OWL CAROUSEL
+.owl-carousel .owl-nav .owl-prev {
+    background: url(../images/varius/leftArrowCircle.png) no-repeat !important;
+    float: left;
+}
+  
+.owl-carousel .owl-nav .owl-next {
+    background: url(../images/varius/rightArrowCircle.png) no-repeat !important;
+    float: right;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.owl-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+}
+@media screen and (max-width: 1199px) {    
+    .owl-carousel .owl-nav .owl-prev, 
+    .owl-carousel .owl-nav .owl-next {
+        background-size: 80px !important; 
+    }
+}
+
+
+
 // HOMEPAGE //
 .header {
     background-color: var(--white);
@@ -449,6 +480,10 @@ button:focus,
     font-size: 15px;
     line-height: 26px;
     letter-spacing: 0.75px;
+}
+
+.header.tiny {
+    height: 80px;
 }
 
 .header.menuHeader {
@@ -461,18 +496,14 @@ button:focus,
     text-align: center;
 }
 
-.header.tiny {
-    height: 80px;
+.header .headerLogo {
+    height: 86px;
+    width: 177px;
 }
 
 .header.tiny .headerLogo {
     width: 121px;
     height: 59px;
-}
-
-.header .headerLogo {
-    height: 86px;
-    width: 177px;
 }
 
 .header.menuHeader .headerLogo{
@@ -481,6 +512,8 @@ button:focus,
 
 .header.menuHeader .whiteLogo{
     display: inline-block !important;
+    width: 121px;
+    height: 59px;
 }
 
 .header .tel img{ 
@@ -608,7 +641,12 @@ button:focus,
     }
 
     .header.tiny .headerLogo {
-        width: 100px;
+        width: 85px;
+        height: 50px;
+    }
+
+    .header.menuHeader .whiteLogo {
+        width: 85px;
         height: 50px;
     }
 }
@@ -661,19 +699,20 @@ button:focus,
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 100000;
   background:linear-gradient(rgba(0, 0,0,.45), rgba(0, 0, 0, .45)), url(../images/varius/ON-Residence-Corridor.jpg) no-repeat center center/cover ;
   overflow-y: hidden;
   backface-visibility: hidden;
   transition: .5s linear;
 }
 .menu-content {
-    height: 100vh;
+    position: absolute;
     display: block;
-    position: relative;
-    margin-top: 8vh;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     backface-visibility: hidden;
-    overflow-y: scroll;
 }
 .menu-content .menu-items a {
     font: normal normal normal 36px/44px var(--fontGeorgiou);
@@ -699,6 +738,9 @@ button:focus,
 
 .menu-contact a{
     color: var(--white);
+}
+
+.menu-contact > a{
     padding-bottom: 5px;
     border-bottom: 1px solid ;
 }
@@ -738,16 +780,30 @@ button:focus,
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (min-height: 1200px) {
     .menu-content .menu-items a {
-        font: normal normal normal 18px/22px var(--fontGeorgiou);
+        font: normal normal normal 40px/50px var(--fontGeorgiou);
+        margin: 10px 0px;
+    }
+    .menu-contact {
+        font: normal normal normal 20px/30px var(--fontAvertaStd);
     }
 }
 
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 800px) {
+    .menu-content .menu-items a {
+        font: normal normal normal 20px/24px var(--fontGeorgiou);
+    }
+}
+
+@media screen and (max-height: 600px) {
     .menu-content .menu-items a {
         font: normal normal normal 15px/18px var(--fontGeorgiou);
         margin: 0px;
+    }
+    .menu-content {
+        width: 100%;
+        top: 60%;
     }
 }
 
@@ -837,7 +893,7 @@ button:focus,
 }
 
 .arrow-wrap:hover img{
-    transform: rotate(-33deg) scale(1.5);
+    transform: rotate(-35deg) scale(1.5);
 }
 
 .arrow-wrap span {
@@ -1186,28 +1242,8 @@ button:focus,
     padding: 10px 80px;
 }
 
-.offersCarousel.owl-carousel .owl-nav .owl-prev {
-    background: url(../images/varius/leftArrowCircle.png) no-repeat;
-    float: left;
-}
-  
-.offersCarousel.owl-carousel .owl-nav .owl-next {
-    background: url(../images/varius/rightArrowCircle.png) no-repeat;
-    float: right;
-}
-
-.offersCarousel.owl-carousel .owl-nav .owl-prev, .offersCarousel.owl-carousel .owl-nav .owl-next {
-    height: 100px;
-    width: 100px;
-    position: relative;
-
-}
-
 .offersCarousel.owl-carousel .owl-nav {
-    position: absolute;
     top: 25%;
-    left: 0;
-    width: 100%;
 }
 
 .specialOffers h2 {
@@ -1227,9 +1263,8 @@ button:focus,
     .offersCarousel.owl-carousel .owl-nav {
         top: 19%;
     }
-    .offersCarousel.owl-carousel .owl-nav .owl-prev, .offersCarousel.owl-carousel .owl-nav .owl-next {
-        background-size: 80px;
-    }
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1257,7 +1292,7 @@ button:focus,
 .awardsHome ul li{
     display: inline-block;
     margin-top: 20px;
-    margin-right: 100px;
+    margin-right: 150px;
 }
 
 .awardsHome ul li:last-child{
@@ -1266,7 +1301,7 @@ button:focus,
 
 @media screen and (max-width:1440px) {   
     .awardsHome ul li{
-        margin-right: 70px;
+        margin-right: 100px;
     }
 }
 
@@ -1278,6 +1313,12 @@ button:focus,
     }
     .awardsHome ul li{
         margin-right: 0px;
+        flex: 30%;
+    }
+}
+
+@media screen and (max-width:767px) {   
+    .awardsHome ul li{
         flex: 50%;
     }
 }
@@ -1292,7 +1333,7 @@ button:focus,
 //END AWARDS SECTION 
 
 // BOOK SECTION 
-.bookNowSection {
+.bookNowSection .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1367,7 +1408,10 @@ button:focus,
 }
 
 .footer .leftSide {
-    background: url(../images/varius/footer.svg) no-repeat center bottom;
+    background-image: url(../images/varius/footer.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: var(--white);
 }
 .footer .rightSide {
     background-color: var(--gold-xxlight);
@@ -1391,12 +1435,12 @@ button:focus,
     color: var(--gold-veryDark);
 }
 
-.footer .contactDetails a {
+.footer .contactDetails > a {
     border-bottom: .5px solid var(--black-light);
     padding: 0px 0px 5px 0px;
 }
 
-.footer .contactDetails a:hover {
+.footer .contactDetails > a:hover {
     border-bottom: .5px solid var(--gold-veryDark);
 }
 
@@ -1422,7 +1466,6 @@ button:focus,
     color: var(--grey-9E);
 }
 
-
 @media screen and (max-width:1440px) {
     .footer .col-md-6{
         padding: 100px 40px 150px;
@@ -1436,7 +1479,7 @@ button:focus,
 }
 
 @media screen and (max-width:1199px) and (min-width:768px){
- 
+
     .footer .contactDetails,.footer .footerMenu{
         width: 50%;
     }
@@ -1451,12 +1494,10 @@ button:focus,
 }
 
 @media screen and (max-width:767px) {
-    .footer .col-md-6{
-        padding: 50px 20px 50px;
-    }
+
     .footer .col-md-6.leftSide{
-        padding: 50px 20px 20px;
-        background: none;
+        padding: 0px 20px 20px;
+        background-image: none;
     }
     .footer .col-md-6.rightSide{
         padding: 50px 20px 200px;
@@ -1512,12 +1553,57 @@ a.scrollup, a:hover.scrollup {
 
 //  ESWTERIKES
 .landingPage .mainContent{
+    height: 100vh;
+}
+
+.landingPage .simpleContent{
     height: 100%;
-    margin-top: 120px;
+    margin-top: 150px;
+}
+
+.landingPage .mainContent .container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landingPage .simpleContent .container{
+    position:static;
+    transform: none;
 }
 
 .mainContent-box {
     padding-left: 60px;
+}
+
+.mainPages .revert .mainContent-box {
+    padding-left: 0px;
+    padding-right: 100px;
+}
+
+.mainPagesOwlCarousel .owl-nav{
+    top: 45%;
+    padding: 0px 100px;
+}
+
+.mainPagesOwlCarousel img {
+    min-height: 400px;
+}
+
+.mainPagePhotos #counter {
+    position: absolute;
+    padding: 50px 0px 0px 125px;
+    z-index: 2;
+    color: var(--white);
+}
+
+.topLeftImg {
+    position: relative;
+    left: 250px;
+    margin-top: 40px;
+    width: 400px;
 }
 
 .simpleContent .mainContent-box {
@@ -1533,16 +1619,51 @@ a.scrollup, a:hover.scrollup {
     margin: 20px auto 0px auto;
 }
 
+@media screen and (max-width: 1199px) {
+    .topLeftImg {
+        width: 300px;
+    }
+}
+
 @media screen and (max-width:991px) {
     .landingPage .mainContent {
-        margin-top: 90px;
+        margin-top: 60px;
     }
     .landingPage .simpleContent {
         margin-top: 30px;
     }
+    
+    .mainPages .mainContent-box {
+        padding-left: 0px;
+    }
+
+    .mainPages .revert .mainContent-box {
+        padding-right: 0px;
+    }
+
+    .mainPages .underLineHeading::after {
+        margin: 10px auto 10px auto;
+    }
+
+    .topLeftImg {
+        width: auto;
+        left: 0;
+        margin-top: 0;
+    }
+
+    .mainPages img {
+        max-height: 400px;
+    }
 }
 
 @media screen and (max-width:767px) {
+    .landingPage .mainContent{
+        height: auto;
+    }
+    .landingPage .mainContent .container {
+        position: static;
+        transform: none;
+    }
     .mainContent-box {
         padding-left: 0px;
     }
@@ -1559,7 +1680,77 @@ a.scrollup, a:hover.scrollup {
     .pageContent .underLineHeading{
         text-align: center;
     }
+
+    .mainPagesOwlCarousel .owl-nav{
+        padding: 0px 50px;
+    }
+    
+    .mainPagePhotos #counter {
+        padding: 30px 0px 0px 65px;
+    }
+    
 }
+
+@media screen and (max-width: 480px) {
+    .mainPagesOwlCarousel .owl-nav{
+        padding: 0px 10px;
+    }
+    
+    .mainPagePhotos #counter {
+        padding: 30px 0px 0px 25px;
+    }
+}
+
+
+// CONTACT PAGE 
+.contactPage .contact-box {
+    margin-top: 130px;
+}
+
+.contactPage .social ul li{
+    display: inline-flex;
+}
+
+.contactPage .contactDetails a {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.contactPage .contactDetails a:last-child{
+    color: var(--white);
+    padding-bottom: 5px;
+    border-bottom: 1px solid ;
+}
+
+.contactPage .contactDetails a:hover {
+    color: var(--gold-light);
+}
+
+.map-box{
+    filter: grayscale(100%);
+    transition: .3s linear;
+}
+
+.map-box:hover{
+    filter: grayscale(0%);
+}
+
+@media screen and (max-width: 1199px) {
+   .map-box {
+       height: 500px !important;
+   }
+}
+
+@media screen and (max-width: 767px) {
+    .contactPage .contact-box {
+        margin-top: 80px;
+    }
+
+    .map-box {
+        height: 400px !important;
+    }
+}
+//END CONTACT PAGE 
 
 
 // MODAL 
@@ -1598,44 +1789,4 @@ a.scrollup, a:hover.scrollup {
     }
 }
 //END MODAL 
-
-
-.contactPage .contact-box {
-    margin-top: 130px;
-}
-
-.contactPage .social ul li{
-    display: inline-flex;
-}
-
-.contactPage .contactDetails a:last-of-type {
-    color: var(--white);
-    padding-bottom: 5px;
-    border-bottom: 1px solid ;
-}
-
-.map-box{
-    filter: grayscale(100%);
-    transition: .3s linear;
-}
-
-.map-box:hover{
-    filter: grayscale(0%);
-}
-
-@media screen and (max-width: 1199px) {
-   .map-box {
-       height: 500px !important;
-   }
-}
-
-@media screen and (max-width: 767px) {
-    .contactPage .contact-box {
-        margin-top: 80px;
-    }
-
-    .map-box {
-        height: 400px !important;
-    }
-}
 

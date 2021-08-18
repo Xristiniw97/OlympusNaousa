@@ -65,6 +65,36 @@ $(document).ready(function() {
       }
     });
 
+
+
+    $(function(){
+      $('.mainPagesOwlCarousel').owlCarousel({
+        smartSpeed: 300,
+        loop: false,
+        responsiveClass: true,
+        margin:0,
+        nav: true,
+        navText: ["", ""],
+        dots: false,
+        items: 1,
+        onInitialized:counter,
+        onTranslated:counter
+       
+      });
+  
+        function counter(event) {
+        var items = event.item.count;
+        var item = event.item.index + 1;
+        if(item<10) {
+          item = "0"+item;
+        }
+        if(items<10) {
+          items = "0"+items;
+        }
+        $('#counter').html(item+ "  /  "+items);
+        }
+      });
+
      
     //MENU
     $( ".openMenu" ).click(function() {
